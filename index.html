@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlogShop - Blog & Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Blog<span>Shop</span></h1>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="showCart()">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <h2>Welcome to BlogShop</h2>
+
+            <p>
+                Read interesting blogs and shop your favorite products
+                in one place.
+            </p>
+
+            <a href="#shop" class="hero-btn">Shop Now</a>
+        </div>
+
+    </section>
+
+
+    <!-- Blog Section -->
+    <section id="blogs" class="section">
+
+        <h2 class="section-title">Latest Blogs</h2>
+
+        <div class="blog-container">
+
+            <div class="blog-card">
+                <div class="blog-image">💻</div>
+
+                <div class="blog-content">
+                    <h3>Best Technology Trends</h3>
+
+                    <p>
+                        Learn about the latest technology trends
+                        and how they are changing our daily life.
+                    </p>
+
+                    <button onclick="readMore('Technology is changing the world with AI, cloud computing, smartphones and many other innovations.')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ❤️ Like <span>0</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="blog-card">
+                <div class="blog-image">🛍️</div>
+
+                <div class="blog-content">
+                    <h3>Online Shopping Tips</h3>
+
+                    <p>
+                        Follow some simple tips to make your online
+                        shopping safe and useful.
+                    </p>
+
+                    <button onclick="readMore('Always compare prices, check product reviews and purchase products from trusted websites.')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ❤️ Like <span>0</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="blog-card">
+                <div class="blog-image">📚</div>
+
+                <div class="blog-content">
+                    <h3>Student Productivity</h3>
+
+                    <p>
+                        Simple study and time-management ideas
+                        for college students.
+                    </p>
+
+                    <button onclick="readMore('Students can improve productivity by creating a daily schedule, reducing distractions and studying consistently.')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ❤️ Like <span>0</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Shopping Section -->
+    <section id="shop" class="section shop-section">
+
+        <h2 class="section-title">Online Shop</h2>
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+
+                <div class="product-image">🎧</div>
+
+                <h3>Wireless Headphones</h3>
+
+                <p class="product-description">
+                    High quality wireless headphones with comfortable design.
+                </p>
+
+                <h3 class="price">₹1,499</h3>
+
+                <button onclick="addToCart('Wireless Headphones', 1499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="product-card">
+
+                <div class="product-image">⌚</div>
+
+                <h3>Smart Watch</h3>
+
+                <p class="product-description">
+                    Stylish smartwatch for fitness and daily activities.
+                </p>
+
+                <h3 class="price">₹2,499</h3>
+
+                <button onclick="addToCart('Smart Watch', 2499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="product-card">
+
+                <div class="product-image">🎒</div>
+
+                <h3>College Backpack</h3>
+
+                <p class="product-description">
+                    Strong and stylish backpack for college students.
+                </p>
+
+                <h3 class="price">₹999</h3>
+
+                <button onclick="addToCart('College Backpack', 999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="product-card">
+
+                <div class="product-image">👕</div>
+
+                <h3>Casual T-Shirt</h3>
+
+                <p class="product-description">
+                    Comfortable cotton T-shirt for everyday use.
+                </p>
+
+                <h3 class="price">₹699</h3>
+
+                <button onclick="addToCart('Casual T-Shirt', 699)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            If you have any questions, suggestions or product enquiries,
+            feel free to contact us.
+        </p>
+
+        <div class="contact-details">
+
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <a href="tel:8688723529">
+                    8688723529
+                </a>
+            </div>
+
+
+            <div class="contact-card">
+                <h3>📧 Email</h3>
+                <a href="mailto:reddypalliganesh@mail.com">
+                    reddypalliganesh@mail.com
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <form class="contact-form" onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>BlogShop</h3>
+
+        <p>
+            Blogging • Shopping • Technology
+        </p>
+
+        <p>
+            © 2026 BlogShop. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
